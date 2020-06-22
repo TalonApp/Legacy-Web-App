@@ -1,1 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header-container {
+	text-align: center;
+	color: #00309f;
+	margin-bottom: 50px;
+}
+
+.header-title {
+	margin-bottom: 0;
+	margin-top: 80px;
+	font-size: 60px;
+}
+
+.header-subtitle {
+	margin-top: -12px;
+	font-size: 22px;
+}
+
+.header-link {
+	text-decoration: none;
+	color: #00309f;
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
