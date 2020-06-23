@@ -150,3 +150,25 @@ body {
 .about-card-btn {
 	margin-right: 10px;
 }
+
+.saved-card {
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	padding: 20px;
+}
+
+.saved-card-title {
+	font-size: 14px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.saved-card-url {
+	font-size: 14px;
+	margin-top: 0;
+}
+
+.saved-card-contents {
+	margin-left: 15px;
+}

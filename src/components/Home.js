@@ -14,7 +14,7 @@ const Home = () => {
 						<p>Discord</p>
 					</Link>
 					<Link className="platform-link" to="/add">
-						<img alt="discord-img" src={slackImg} />
+						<img alt="slack-img" src={slackImg} />
 						<p>Slack</p>
 					</Link>
 				</div>
@@ -37,10 +37,26 @@ const Home = () => {
 						Saved Webhooks <span>(2)</span>
 					</h4>
 					<div className="saved-card card">
-						<p>.</p>
+						<img alt="discord-img" src={discordImg} />
+						<div className="saved-card-contents">
+							<h5 className="saved-card-title">Discord Webhook #1</h5>
+							<p className="saved-card-url" title="">
+								https://discordapp.com/api/webhooks/72440975833...
+							</p>
+							<button className="btn about-card-btn">View</button>
+							<button className="btn about-card-btn">Remove</button>
+						</div>
 					</div>
 					<div className="saved-card card">
-						<p>.</p>
+						<img alt="discord-img" src={slackImg} />
+						<div className="saved-card-contents">
+							<h5 className="saved-card-title">Slack Webhook #1</h5>
+							<p className="saved-card-url" title="">
+								https://hooks.slack.com/services/7244097583330100...
+							</p>
+							<button className="btn about-card-btn">View</button>
+							<button className="btn about-card-btn">Remove</button>
+						</div>
 					</div>
 				</div>
 			</div>
