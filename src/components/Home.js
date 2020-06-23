@@ -28,7 +28,12 @@ const Home = () => {
 						<p className="about-card-description">
 							Talon is a cross platform application by{' '}
 							<span>
-								<a className="hidden-link" href="https://peroxaan.com/" target="_blank">
+								<a
+									className="hidden-link"
+									href="https://peroxaan.com/"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
 									Peroxaan Studios
 								</a>
 							</span>{' '}
