@@ -7,7 +7,7 @@ import slackImg from '../images/slack.png';
 const Home = () => {
 	const [ webhooks, setWebhooks ] = useState([]);
 
-	useEffect(() => {
+	const reloadWebhooks = () => {
 		let webhooksStr = localStorage.getItem('webhooks');
 		if (webhooksStr) {
 			setWebhooks(
@@ -19,11 +19,16 @@ const Home = () => {
 							img={item.type === 'discord' ? discordImg : slackImg}
 							url={item.url}
 							id={item.id}
+							reload={reloadWebhooks}
 						/>
 					);
 				})
 			);
 		}
+	};
+
+	useEffect(() => {
+		reloadWebhooks();
 	}, []);
 
 	return (
