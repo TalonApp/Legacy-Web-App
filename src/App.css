@@ -266,3 +266,22 @@ body {
 	padding: 5px 10px;
 	outline: none;
 }
+
+.body-section {
+	padding-bottom: 50px;
+	min-height: calc(100vh - 330px);
+}
+
+.footer-section {
+	text-align: center;
+	height: 50px;
+}
+
+.mode-switcher-link {
+	color: #00309f;
+	font-size: 13px;
+}
+
+.mode-switcher-link span {
+	text-decoration: none;
+}
