@@ -2,6 +2,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	color: #00309f;
 }
 
 .header-container {
@@ -35,7 +36,7 @@ body {
 }
 
 .platform-card {
-	margin-bottom: 300px;
+	margin-bottom: 50px;
 	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
@@ -81,4 +82,71 @@ body {
 	margin: 0;
 	margin-top: 3px;
 	margin-left: 5px;
+}
+
+.home-flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+.home-flex-container .card {
+	width: 450px;
+}
+
+.home-flex-column {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.card-title {
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.card-title span {
+	font-weight: normal;
+}
+
+.saved-card {
+	margin-bottom: 10px;
+}
+
+.about-card {
+	text-align: left;
+	padding: 20px 30px;
+}
+
+.about-card-title {
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.about-card-description {
+	margin-top: 0;
+}
+
+.about-card-description span {
+	font-weight: bold;
+}
+
+.btn {
+	background: none;
+	background-color: none;
+	outline: none;
+	border: 2.5px solid #00309f;
+	color: #00309f;
+	font-weight: bold;
+	padding: 6px 30px;
+	border-radius: 13px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: rgb(231, 236, 253);
+}
+
+.about-card-btn {
+	margin-right: 10px;
 }

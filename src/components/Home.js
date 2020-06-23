@@ -19,13 +19,23 @@ const Home = () => {
 					</Link>
 				</div>
 			</div>
-			{/* <div className="home-flex-container">
-				<div className="home-about-row">
+			<div className="home-flex-container">
+				<div className="home-flex-column">
+					<h4 className="card-title">What is Talon?</h4>
 					<div className="about-card card">
-						<p>.</p>
+						<p className="about-card-title">About Talon</p>
+						<p className="about-card-description">
+							Talon is a cross platform application by <span>Peroxaan Studios</span> that let's you manage
+							and interact with webhooks for various services with ease.
+						</p>
+						<button className="btn about-card-btn">Learn More</button>
+						<button className="btn about-card-btn">Twitter</button>
 					</div>
 				</div>
-				<div className="home-saved-row">
+				<div className="home-flex-column">
+					<h4 className="card-title">
+						Saved Webhooks <span>(2)</span>
+					</h4>
 					<div className="saved-card card">
 						<p>.</p>
 					</div>
@@ -33,7 +43,7 @@ const Home = () => {
 						<p>.</p>
 					</div>
 				</div>
-			</div> */}
+			</div>
 		</div>
 	);
 };
