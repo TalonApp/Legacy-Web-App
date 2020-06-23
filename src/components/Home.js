@@ -29,6 +29,7 @@ const Home = () => {
 
 	useEffect(() => {
 		reloadWebhooks();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
