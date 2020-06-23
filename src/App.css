@@ -246,3 +246,23 @@ body {
 	text-decoration: none;
 	color: #00309f;
 }
+
+.webhook-details-text {
+	font-size: 13px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.message-text-area {
+	resize: none;
+	border: 2.5px solid #00309f;
+	font-family: 'Open Sans', sans-serif;
+	color: #00309f;
+	width: 250px;
+	height: 50px;
+	margin-bottom: -15px;
+	padding: 5px 10px;
+	outline: none;
+}
