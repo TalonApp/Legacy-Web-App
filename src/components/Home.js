@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SavedCard from './SavedCard';
 import discordImg from '../images/discord.png';
 import slackImg from '../images/slack.png';
 
@@ -37,28 +38,16 @@ const Home = () => {
 						Saved Webhooks <span>(2)</span>
 					</h4>
 					{/* <p className="no-saved-message">You currently do not have any saved Webhooks.</p> */}
-					<div className="saved-card card">
-						<img alt="discord-img" src={discordImg} />
-						<div className="saved-card-contents">
-							<h5 className="saved-card-title">Discord Webhook #1</h5>
-							<p className="saved-card-url" title="">
-								https://discordapp.com/api/webhooks/72440975833...
-							</p>
-							<button className="btn about-card-btn">View</button>
-							<button className="btn about-card-btn">Remove</button>
-						</div>
-					</div>
-					<div className="saved-card card">
-						<img alt="discord-img" src={slackImg} />
-						<div className="saved-card-contents">
-							<h5 className="saved-card-title">Slack Webhook #1</h5>
-							<p className="saved-card-url" title="">
-								https://hooks.slack.com/services/7244097583330100...
-							</p>
-							<button className="btn about-card-btn">View</button>
-							<button className="btn about-card-btn">Remove</button>
-						</div>
-					</div>
+					<SavedCard
+						title="Discord Webhook #1"
+						img={discordImg}
+						url="https://discordapp.com/api/webhooks/72440975833..."
+					/>
+					<SavedCard
+						title="Slack Webhook #1"
+						img={slackImg}
+						url="https://hooks.slack.com/services/7244097583330100..."
+					/>
 				</div>
 			</div>
 		</div>
