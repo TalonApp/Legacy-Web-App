@@ -17,7 +17,7 @@ function App() {
 				<div className="body-section">
 					<Switch>
 						<Route path="/" exact component={Home} />
-						<Route path="/add" component={Add} />
+						<Route path="/add/:type(discord|slack)" component={Add} />
 						<Route path="/edit" component={Edit} />
 						<Route path="/use" component={Use} />
 					</Switch>

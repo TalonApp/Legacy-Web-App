@@ -10,11 +10,11 @@ const Home = () => {
 			<div className="card platform-card">
 				<h5 className="platform-title">Select a platform below.</h5>
 				<div className="platform-link-container">
-					<Link className="platform-link" to="/add">
+					<Link className="platform-link" to="/add/discord">
 						<img alt="discord-img" src={discordImg} />
 						<p>Discord</p>
 					</Link>
-					<Link className="platform-link" to="/add">
+					<Link className="platform-link" to="/add/slack">
 						<img alt="slack-img" src={slackImg} />
 						<p>Slack</p>
 					</Link>
