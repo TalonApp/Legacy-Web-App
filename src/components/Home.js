@@ -26,8 +26,13 @@ const Home = () => {
 					<div className="about-card card">
 						<p className="about-card-title">About Talon</p>
 						<p className="about-card-description">
-							Talon is a cross platform application by <span>Peroxaan Studios</span> that let's you manage
-							and interact with webhooks for various services with ease.
+							Talon is a cross platform application by{' '}
+							<span>
+								<a className="hidden-link" href="https://peroxaan.com/" target="_blank">
+									Peroxaan Studios
+								</a>
+							</span>{' '}
+							that let's you manage and interact with webhooks for various services with ease.
 						</p>
 						<button
 							onClick={() => window.open('https://peroxaan.com/Talon/')}
