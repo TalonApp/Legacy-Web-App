@@ -285,3 +285,15 @@ body {
 .mode-switcher-link span {
 	text-decoration: none;
 }
+
+.err-message {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.success-message {
+	color: green;
+	font-weight: bold;
+	text-align: center;
+}
