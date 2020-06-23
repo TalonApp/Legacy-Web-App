@@ -36,6 +36,7 @@ const Home = () => {
 					<h4 className="card-title">
 						Saved Webhooks <span>(2)</span>
 					</h4>
+					{/* <p className="no-saved-message">You currently do not have any saved Webhooks.</p> */}
 					<div className="saved-card card">
 						<img alt="discord-img" src={discordImg} />
 						<div className="saved-card-contents">
