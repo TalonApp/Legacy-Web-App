@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SavedCard from './SavedCard';
 import discordImg from '../images/discord.png';
 import slackImg from '../images/slack.png';
 
 const Home = () => {
+	const [ webhooks, setWebhooks ] = useState([]);
+
+	useEffect(() => {
+		let webhooksStr = localStorage.getItem('webhooks');
+		if (webhooksStr) {
+			setWebhooks(
+				JSON.parse(webhooksStr).map((item) => {
+					return (
+						<SavedCard
+							title={item.name}
+							key={item.id}
+							img={item.type === 'discord' ? discordImg : slackImg}
+							url={item.url}
+							id={item.id}
+						/>
+					);
+				})
+			);
+		}
+	}, []);
+
 	return (
 		<div className="home-container">
 			<div className="card platform-card">
@@ -55,19 +76,12 @@ const Home = () => {
 				</div>
 				<div className="home-flex-column">
 					<h4 className="card-title">
-						Saved Webhooks <span>(2)</span>
+						Saved Webhooks <span>({webhooks.length})</span>
 					</h4>
-					{/* <p className="no-saved-message">You currently do not have any saved Webhooks.</p> */}
-					<SavedCard
-						title="Discord Webhook #1"
-						img={discordImg}
-						url="https://discordapp.com/api/webhooks/72440975833..."
-					/>
-					<SavedCard
-						title="Slack Webhook #1"
-						img={slackImg}
-						url="https://hooks.slack.com/services/7244097583330100..."
-					/>
+					<p style={{ display: webhooks.length ? 'none' : '' }} className="no-saved-message">
+						You currently do not have any saved Webhooks.
+					</p>
+					{webhooks}
 				</div>
 			</div>
 		</div>
