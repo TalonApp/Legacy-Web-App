@@ -9,10 +9,7 @@ const Add = (props) => {
 		<div className="add-container">
 			<div className="card add-card">
 				<div className="add-card-heading">
-					<img
-						alt="service-img"
-						src={serviceType === 'discord' ? discordImg : serviceType === 'slack' ? slackImg : discordImg}
-					/>
+					<img alt="service-img" src={serviceType === 'discord' ? discordImg : slackImg} />
 					<div className="add-card-heading-text">
 						<h3>Setup Webhook</h3>
 						<p>Add a {serviceType} webhook below.</p>
