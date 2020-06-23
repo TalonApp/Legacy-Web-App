@@ -29,8 +29,18 @@ const Home = () => {
 							Talon is a cross platform application by <span>Peroxaan Studios</span> that let's you manage
 							and interact with webhooks for various services with ease.
 						</p>
-						<button className="btn about-card-btn">Learn More</button>
-						<button className="btn about-card-btn">Twitter</button>
+						<button
+							onClick={() => window.open('https://peroxaan.com/Talon/')}
+							className="btn about-card-btn"
+						>
+							Learn More
+						</button>
+						<button
+							onClick={() => window.open('https://twitter.com/TalonApp')}
+							className="btn about-card-btn"
+						>
+							Twitter
+						</button>
 					</div>
 				</div>
 				<div className="home-flex-column">
