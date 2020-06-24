@@ -298,3 +298,10 @@ body {
 	font-weight: bold;
 	text-align: center;
 }
+
+:focus {
+	outline: none;
+}
+::-moz-focus-inner {
+	border: 0;
+}
