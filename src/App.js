@@ -9,6 +9,7 @@ import Edit from './components/Edit';
 import Use from './components/Use';
 
 import './App.css';
+import './Responsive.css';
 
 function App() {
 	const [ darkMode, setDarkMode ] = useState(false);

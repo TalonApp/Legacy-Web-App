@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1060px) {
+	.home-flex-container {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.about-card-column {
+		display: none !important;
+	}
+}

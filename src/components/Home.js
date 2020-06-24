@@ -48,7 +48,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="home-flex-container">
-				<div className="home-flex-column">
+				<div className="home-flex-column about-card-column">
 					<h4 className="card-title">What is Talon?</h4>
 					<div className="about-card card">
 						<p className="about-card-title">About Talon</p>
