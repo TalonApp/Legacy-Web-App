@@ -20,7 +20,7 @@ function App() {
 						<Route path="/" exact component={Home} />
 						<Route path="/add/:type(discord|slack)" component={Add} />
 						<Route path="/edit" component={Edit} />
-						<Route path="/use" component={Use} />
+						<Route path="/use/:id" component={Use} />
 					</Switch>
 				</div>
 				<Footer />
