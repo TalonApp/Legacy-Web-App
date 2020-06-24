@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -9,11 +9,26 @@ import Edit from './components/Edit';
 import Use from './components/Use';
 
 import './App.css';
-import './DarkMode.css';
 
 function App() {
+	const [ darkMode, setDarkMode ] = useState(false);
+
+	useEffect(() => {
+		let dark = localStorage.getItem('darkmode');
+		if (dark) {
+			setDarkMode(dark === 'true' ? true : false);
+		} else {
+			localStorage.setItem('darkmode', 'false');
+		}
+	}, []);
+
 	return (
 		<div>
+			<div
+				dangerouslySetInnerHTML={{
+					__html: darkMode ? '<link rel="stylesheet" type="text/css" href="/DarkMode.css" />' : ''
+				}}
+			/>
 			<Router>
 				<Header />
 				<div className="body-section">
@@ -24,7 +39,7 @@ function App() {
 						<Route path="/use/:id" component={Use} />
 					</Switch>
 				</div>
-				<Footer />
+				<Footer setDarkMode={setDarkMode} />
 			</Router>
 		</div>
 	);

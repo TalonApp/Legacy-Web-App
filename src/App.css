@@ -282,8 +282,9 @@ body {
 	font-size: 13px;
 }
 
-.mode-switcher-link span {
+.mode-switcher-link-selected {
 	text-decoration: none;
+	cursor: unset;
 }
 
 .err-message {
