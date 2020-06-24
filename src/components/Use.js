@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import discordImg from '../images/discord-lg.png';
 import slackImg from '../images/slack-lg.png';
 
 const Use = (props) => {
 	let history = useHistory();
 	const [ webhook, setWebhook ] = useState(false);
+	const [ messageToSend, setMessageToSend ] = useState('');
+	const [ errMessage, setErrMessage ] = useState('');
+	const [ successMessage, setSuccessMessage ] = useState('');
 
 	useEffect(() => {
 		let webhooks = localStorage.getItem('webhooks');
@@ -21,6 +25,40 @@ const Use = (props) => {
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setSuccessMessage('');
+		setErrMessage('');
+		const sendMessage = async () => {
+			if (webhook.type === 'discord') {
+				let request = {
+					content: messageToSend
+				};
+				if (webhook.username) {
+					request.username = webhook.username;
+				}
+				if (webhook.profile) {
+					request.avatar_url = webhook.profile;
+				}
+				try {
+					let response = await axios.post(webhook.url, request);
+					console.log(response);
+					setSuccessMessage('Message Sent Successfully!');
+					setMessageToSend('');
+				} catch (err) {
+					setErrMessage('Error Sending Message.');
+				}
+			}
+		};
+		sendMessage();
+	};
+
+	const handleChange = (e) => {
+		setSuccessMessage('');
+		setErrMessage('');
+		setMessageToSend(e.target.value);
+	};
 
 	return (
 		<div style={{ display: webhook ? '' : 'none' }} className="use-container">
@@ -79,11 +117,30 @@ const Use = (props) => {
 								<p>Send a message using this webhook.</p>
 							</div>
 						</div>
+						<p className="err-message" style={{ marginTop: -20, display: errMessage ? '' : 'none' }}>
+							{errMessage}
+						</p>
+						<p
+							className="success-message"
+							style={{ marginTop: -20, display: successMessage ? '' : 'none' }}
+						>
+							{successMessage}
+						</p>
 						<div className="add-card-body">
-							<textarea className="message-text-area" placeholder="Message Contents..." />
-							<div className="add-card-btn-container">
-								<button className="btn about-card-btn">Send Message</button>
-							</div>
+							<form onSubmit={handleSubmit}>
+								<textarea
+									onChange={handleChange}
+									className="message-text-area"
+									placeholder="Message Contents..."
+									required
+									value={messageToSend}
+								/>
+								<div className="add-card-btn-container">
+									<button type="submit" className="btn about-card-btn">
+										Send Message
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
