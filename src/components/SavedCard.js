@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const SavedCard = (props) => {
 	let history = useHistory();
 
+	const [ removed, setRemoved ] = useState(false);
+
 	const handleRemove = () => {
-		let webhooks = JSON.parse(localStorage.getItem('webhooks'));
-		localStorage.setItem('webhooks', JSON.stringify(webhooks.filter((item) => item.id !== props.id)));
-		props.reload();
+		setRemoved(true);
+		setTimeout(() => {
+			let webhooks = JSON.parse(localStorage.getItem('webhooks'));
+			localStorage.setItem('webhooks', JSON.stringify(webhooks.filter((item) => item.id !== props.id)));
+			props.reload();
+		}, 500);
 	};
 
 	return (
-		<div className="saved-card card">
+		<div className={`saved-card card ${removed ? 'removed-card' : ''}`}>
 			<img alt="service-img" src={props.img} />
 			<div className="saved-card-contents">
 				<h5 className="saved-card-title">{props.title}</h5>

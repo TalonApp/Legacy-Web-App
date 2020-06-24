@@ -31,6 +31,17 @@
 	}
 }
 
+@keyframes zoomfadeout {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(0);
+	}
+}
+
 .platform-card {
 	opacity: 0;
 	animation-name: fadeup;
@@ -64,5 +75,12 @@
 	opacity: 0;
 	animation-name: faderight;
 	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.removed-card {
+	opacity: 0;
+	animation-name: zoomfadeout;
+	animation-duration: .5s;
 	animation-fill-mode: forwards;
 }
