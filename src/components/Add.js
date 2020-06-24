@@ -77,6 +77,7 @@ const Add = (props) => {
 					<form onSubmit={handleSubmit}>
 						<input
 							type="text"
+							maxLength="30"
 							value={webhookName}
 							onChange={handleChange}
 							name="webhookName"
@@ -94,13 +95,14 @@ const Add = (props) => {
 						<div style={{ display: serviceType === 'discord' ? '' : 'none' }}>
 							<input
 								type="text"
+								maxLength="20"
 								value={overrideUsername}
 								onChange={handleChange}
 								name="overrideUsername"
 								placeholder="Override Username (optional)"
 							/>
 							<input
-								type="text"
+								type="link"
 								value={overrideProfilePic}
 								onChange={handleChange}
 								name="overrideProfilePic"

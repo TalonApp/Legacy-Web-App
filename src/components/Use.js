@@ -49,14 +49,19 @@ const Use = (props) => {
 									<strong>Username Override: </strong>
 									{webhook.username ? webhook.username : 'N/A'}
 								</p>
-								<p className="webhook-details-text">
+								<p title={webhook.profile ? webhook.profile : ''} className="webhook-details-text">
 									<strong>Profile Pic Override: </strong>
-									{webhook.profile ? webhook.profile : 'N/A'}
+									{webhook.profile ? webhook.profile.slice(0, 29) : 'N/A'}
+									{webhook.profile ? webhook.profile.length > 29 ? '...' : '' : ''}
 								</p>
 							</div>
 
 							<div className="add-card-btn-container">
-								<button type="button" className="btn about-card-btn">
+								<button
+									type="button"
+									onClick={() => history.push('/edit/' + webhook.id)}
+									className="btn about-card-btn"
+								>
 									Edit Webhook
 								</button>
 								<button type="button" onClick={() => history.push('/')} className="btn about-card-btn">
