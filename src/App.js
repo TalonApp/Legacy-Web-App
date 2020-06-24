@@ -10,6 +10,7 @@ import Use from './components/Use';
 
 import './App.css';
 import './Responsive.css';
+import './Animations.css';
 
 function App() {
 	const [ darkMode, setDarkMode ] = useState(false);

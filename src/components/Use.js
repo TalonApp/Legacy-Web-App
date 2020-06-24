@@ -84,7 +84,7 @@ const Use = (props) => {
 		<div style={{ display: webhook ? '' : 'none' }} className="use-container">
 			<div className="home-flex-container">
 				<div className="home-flex-column">
-					<div style={{ width: '350px' }} className="card add-card">
+					<div style={{ width: '350px' }} className="card add-card right-card-ani">
 						<div style={{ textAlign: 'left' }} className="add-card-heading">
 							<img alt="service-img" src={webhook.type === 'discord' ? discordImg : slackImg} />
 							<div className="add-card-heading-text">
@@ -130,7 +130,7 @@ const Use = (props) => {
 					</div>
 				</div>
 				<div className="home-flex-column">
-					<div style={{ width: '350px' }} className="card add-card">
+					<div style={{ width: '350px' }} className="card add-card left-card-ani">
 						<div style={{ textAlign: 'left' }} className="add-card-heading">
 							<div className="add-card-heading-text">
 								<h3>Send Message</h3>

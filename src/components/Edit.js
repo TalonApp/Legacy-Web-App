@@ -85,7 +85,7 @@ const Edit = (props) => {
 
 	return (
 		<div style={{ display: webhook ? '' : 'none' }} className="add-container">
-			<div className="card add-card">
+			<div className="card add-card add-edit-ani">
 				<div className="add-card-heading">
 					<img alt="service-img" src={webhook.type === 'discord' ? discordImg : slackImg} />
 					<div className="add-card-heading-text">

@@ -64,7 +64,7 @@ const Add = (props) => {
 
 	return (
 		<div className="add-container">
-			<div className="card add-card">
+			<div className="card add-card add-edit-ani">
 				<div className="add-card-heading">
 					<img alt="service-img" src={serviceType === 'discord' ? discordImg : slackImg} />
 					<div className="add-card-heading-text">

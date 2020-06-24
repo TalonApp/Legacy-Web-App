@@ -47,7 +47,7 @@ const Home = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="home-flex-container">
+			<div className="home-flex-container home-delay-ani">
 				<div className="home-flex-column about-card-column">
 					<h4 className="card-title">What is Talon?</h4>
 					<div className="about-card card">

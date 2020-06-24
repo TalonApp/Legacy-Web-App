@@ -1,0 +1,68 @@
+@keyframes fadeup {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeleft {
+	from {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes faderight {
+	from {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.platform-card {
+	opacity: 0;
+	animation-name: fadeup;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.home-delay-ani {
+	opacity: 0;
+	animation-name: fadeup;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+}
+
+.add-edit-ani {
+	opacity: 0;
+	animation-name: fadeup;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.left-card-ani {
+	opacity: 0;
+	animation-name: fadeleft;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.right-card-ani {
+	opacity: 0;
+	animation-name: faderight;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
