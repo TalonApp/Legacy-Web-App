@@ -19,7 +19,7 @@ function App() {
 					<Switch>
 						<Route path="/" exact component={Home} />
 						<Route path="/add/:type(discord|slack)" component={Add} />
-						<Route path="/edit" component={Edit} />
+						<Route path="/edit/:id" component={Edit} />
 						<Route path="/use/:id" component={Use} />
 					</Switch>
 				</div>
