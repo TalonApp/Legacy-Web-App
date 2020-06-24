@@ -12,7 +12,7 @@ const SavedCard = (props) => {
 			let webhooks = JSON.parse(localStorage.getItem('webhooks'));
 			localStorage.setItem('webhooks', JSON.stringify(webhooks.filter((item) => item.id !== props.id)));
 			props.reload();
-		}, 500);
+		}, 1000);
 	};
 
 	return (
