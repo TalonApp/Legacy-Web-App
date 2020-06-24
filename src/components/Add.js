@@ -102,7 +102,7 @@ const Add = (props) => {
 								placeholder="Override Username (optional)"
 							/>
 							<input
-								type="link"
+								type="url"
 								value={overrideProfilePic}
 								onChange={handleChange}
 								name="overrideProfilePic"
