@@ -49,6 +49,26 @@ const Use = (props) => {
 				} catch (err) {
 					setErrMessage('Error Sending Message.');
 				}
+			} else if (webhook.type === 'slack') {
+				let request = {
+					text: messageToSend
+				};
+				try {
+					let response = await axios.post(webhook.url, JSON.stringify(request), {
+						withCredentials: false,
+						transformRequest: [
+							(data, headers) => {
+								delete headers.post['Content-Type'];
+								return data;
+							}
+						]
+					});
+					console.log(response);
+					setSuccessMessage('Message Sent Successfully!');
+					setMessageToSend('');
+				} catch (err) {
+					setErrMessage('Error Sending Message.');
+				}
 			}
 		};
 		sendMessage();
