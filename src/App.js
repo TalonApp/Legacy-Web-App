@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -31,7 +31,7 @@ function App() {
 					__html: darkMode ? '<link rel="stylesheet" type="text/css" href="/DarkMode.css" />' : ''
 				}}
 			/>
-			<Router>
+			<Router basename="/">
 				<Header />
 				<div className="body-section">
 					<Switch>
