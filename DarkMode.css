@@ -1,0 +1,70 @@
+body {
+	background-color: #000;
+	color: #fff;
+}
+
+.header-container {
+	color: #fff;
+}
+
+.header-link {
+	color: #fff;
+}
+
+.card {
+	border-color: #fff;
+}
+
+.platform-title {
+	color: #fff;
+}
+
+.platform-link {
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn {
+	border-color: #fff;
+	color: #fff;
+}
+
+.add-card-body input {
+	color: #fff;
+	border-color: #fff;
+	background-color: #000;
+}
+
+::placeholder {
+	color: rgba(255, 255, 255, 0.397);
+}
+
+:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.397);
+}
+
+::-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.397);
+}
+
+.hidden-link {
+	color: #fff;
+}
+
+.message-text-area {
+	color: #fff;
+	background-color: #000;
+	border-color: #fff;
+}
+
+.mode-switcher-link {
+	color: #fff;
+}
+
+.platform-link:hover {
+	background-color: rgb(46, 46, 46);
+}
+
+.btn:hover {
+	background-color: rgb(46, 46, 46);
+}
