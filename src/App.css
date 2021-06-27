@@ -221,6 +221,10 @@ body {
 	color: #00309f;
 	outline: none;
 	border: 2.5px solid #00309f;
+<<<<<<< Updated upstream
+=======
+	border-radius: 7px;
+>>>>>>> Stashed changes
 }
 
 ::placeholder {
